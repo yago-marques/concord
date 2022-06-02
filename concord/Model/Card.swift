@@ -9,30 +9,17 @@ import Foundation
 
 public class Card {
     private(set) var id = UUID()
-    var image: String
+    var image: String?
     var name: String
-    var description: String
+    var description: String?
     var serverUrl: String
     
-    init(image: String, name: String, description: String, serverUrl: String) {
+    init(image: String? = nil, name: String, description: String? = nil, serverUrl: String) {
         self.image = image
         self.name = name
         self.description = description
         self.serverUrl = serverUrl
     }
-    
-    convenience init(name: String, serverUrl: String) {
-        self.init(image: "", name: name, description: "", serverUrl: serverUrl)
-    }
-    
-    convenience init(name: String, description: String, serverUrl: String) {
-        self.init(image: "", name: name, description: description, serverUrl: serverUrl)
-    }
-    
-    convenience init(image: String, name: String, serverUrl: String) {
-        self.init(image: "", name: name, description: "", serverUrl: serverUrl)
-    }
-    
 }
 
 
