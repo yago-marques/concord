@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF6881F9284A382D00DCBA3E /* trash.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6881F8284A382D00DCBA3E /* trash.swift */; };
 		DFC1F6C42848D77C003D82CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1F6C32848D77C003D82CF /* AppDelegate.swift */; };
 		DFC1F6C62848D77C003D82CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1F6C52848D77C003D82CF /* SceneDelegate.swift */; };
 		DFC1F6C82848D77C003D82CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1F6C72848D77C003D82CF /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF6881F8284A382D00DCBA3E /* trash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trash.swift; sourceTree = "<group>"; };
 		DFC1F6C02848D77C003D82CF /* concord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = concord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC1F6C32848D77C003D82CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFC1F6C52848D77C003D82CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				DFC1F6DA2848D77E003D82CF /* concordTests.swift */,
+				DF6881F8284A382D00DCBA3E /* trash.swift */,
 			);
 			path = concordTests;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF6881F9284A382D00DCBA3E /* trash.swift in Sources */,
 				DFC1F6DB2848D77E003D82CF /* concordTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
