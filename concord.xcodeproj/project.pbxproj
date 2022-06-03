@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF6881F9284A382D00DCBA3E /* trash.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6881F8284A382D00DCBA3E /* trash.swift */; };
 		DFC1F6C42848D77C003D82CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1F6C32848D77C003D82CF /* AppDelegate.swift */; };
 		DFC1F6C62848D77C003D82CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1F6C52848D77C003D82CF /* SceneDelegate.swift */; };
 		DFC1F6C82848D77C003D82CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1F6C72848D77C003D82CF /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 		DFC1F6DB2848D77E003D82CF /* concordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1F6DA2848D77E003D82CF /* concordTests.swift */; };
 		DFC1F6E52848D77E003D82CF /* concordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1F6E42848D77E003D82CF /* concordUITests.swift */; };
 		DFC1F6E72848D77E003D82CF /* concordUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1F6E62848D77E003D82CF /* concordUITestsLaunchTests.swift */; };
+		DFC1F6F52848EEC4003D82CF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1F6F42848EEC4003D82CF /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF6881F8284A382D00DCBA3E /* trash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trash.swift; sourceTree = "<group>"; };
 		DFC1F6C02848D77C003D82CF /* concord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = concord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC1F6C32848D77C003D82CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFC1F6C52848D77C003D82CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		DFC1F6E02848D77E003D82CF /* concordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = concordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC1F6E42848D77E003D82CF /* concordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = concordUITests.swift; sourceTree = "<group>"; };
 		DFC1F6E62848D77E003D82CF /* concordUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = concordUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DFC1F6F42848EEC4003D82CF /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		DFC1F6C22848D77C003D82CF /* concord */ = {
 			isa = PBXGroup;
 			children = (
+				DFC1F6F32848EEA2003D82CF /* Model */,
 				DFC1F6C32848D77C003D82CF /* AppDelegate.swift */,
 				DFC1F6C52848D77C003D82CF /* SceneDelegate.swift */,
 				DFC1F6C72848D77C003D82CF /* ViewController.swift */,
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				DFC1F6DA2848D77E003D82CF /* concordTests.swift */,
+				DF6881F8284A382D00DCBA3E /* trash.swift */,
 			);
 			path = concordTests;
 			sourceTree = "<group>";
@@ -125,6 +131,14 @@
 				DFC1F6E62848D77E003D82CF /* concordUITestsLaunchTests.swift */,
 			);
 			path = concordUITests;
+			sourceTree = "<group>";
+		};
+		DFC1F6F32848EEA2003D82CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DFC1F6F42848EEC4003D82CF /* Card.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +275,7 @@
 				DFC1F6C82848D77C003D82CF /* ViewController.swift in Sources */,
 				DFC1F6C42848D77C003D82CF /* AppDelegate.swift in Sources */,
 				DFC1F6C62848D77C003D82CF /* SceneDelegate.swift in Sources */,
+				DFC1F6F52848EEC4003D82CF /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF6881F9284A382D00DCBA3E /* trash.swift in Sources */,
 				DFC1F6DB2848D77E003D82CF /* concordTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
