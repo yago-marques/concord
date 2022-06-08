@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DF6881F9284A382D00DCBA3E /* trash.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6881F8284A382D00DCBA3E /* trash.swift */; };
+		DF2D0E51284E4AC600B735E9 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2D0E50284E4AC600B735E9 /* CardTests.swift */; };
+		DF36C3202850C04E0083E575 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF36C31F2850C04E0083E575 /* Main.storyboard */; };
+		DF36C3222850C0AC0083E575 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF36C3212850C0AC0083E575 /* FeedTableViewController.swift */; };
+		DF36C3242850C4150083E575 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF36C3232850C4150083E575 /* Tag.swift */; };
+		DF36C3262850C8020083E575 /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF36C3252850C8020083E575 /* FeedService.swift */; };
+		DF36C3292850C9650083E575 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF36C3272850C9650083E575 /* CardTableViewCell.swift */; };
+		DF36C32A2850C9650083E575 /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF36C3282850C9650083E575 /* CardTableViewCell.xib */; };
+		DF36C32D2850EAA60083E575 /* CreateServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF36C32B2850EAA60083E575 /* CreateServerViewController.swift */; };
+		DF36C32E2850EAA60083E575 /* CreateServerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF36C32C2850EAA60083E575 /* CreateServerViewController.xib */; };
 		DFC1F6C42848D77C003D82CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1F6C32848D77C003D82CF /* AppDelegate.swift */; };
 		DFC1F6C62848D77C003D82CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1F6C52848D77C003D82CF /* SceneDelegate.swift */; };
-		DFC1F6C82848D77C003D82CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1F6C72848D77C003D82CF /* ViewController.swift */; };
-		DFC1F6CB2848D77C003D82CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC1F6C92848D77C003D82CF /* Main.storyboard */; };
 		DFC1F6CD2848D77E003D82CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFC1F6CC2848D77E003D82CF /* Assets.xcassets */; };
 		DFC1F6D02848D77E003D82CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC1F6CE2848D77E003D82CF /* LaunchScreen.storyboard */; };
-		DFC1F6DB2848D77E003D82CF /* concordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1F6DA2848D77E003D82CF /* concordTests.swift */; };
 		DFC1F6E52848D77E003D82CF /* concordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1F6E42848D77E003D82CF /* concordUITests.swift */; };
 		DFC1F6E72848D77E003D82CF /* concordUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1F6E62848D77E003D82CF /* concordUITestsLaunchTests.swift */; };
 		DFC1F6F52848EEC4003D82CF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1F6F42848EEC4003D82CF /* Card.swift */; };
@@ -38,17 +43,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DF6881F8284A382D00DCBA3E /* trash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trash.swift; sourceTree = "<group>"; };
+		DF2D0E50284E4AC600B735E9 /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
+		DF36C31F2850C04E0083E575 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DF36C3212850C0AC0083E575 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		DF36C3232850C4150083E575 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		DF36C3252850C8020083E575 /* FeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
+		DF36C3272850C9650083E575 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		DF36C3282850C9650083E575 /* CardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTableViewCell.xib; sourceTree = "<group>"; };
+		DF36C32B2850EAA60083E575 /* CreateServerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateServerViewController.swift; sourceTree = "<group>"; };
+		DF36C32C2850EAA60083E575 /* CreateServerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateServerViewController.xib; sourceTree = "<group>"; };
 		DFC1F6C02848D77C003D82CF /* concord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = concord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC1F6C32848D77C003D82CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFC1F6C52848D77C003D82CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DFC1F6C72848D77C003D82CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DFC1F6CA2848D77C003D82CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFC1F6CC2848D77E003D82CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFC1F6CF2848D77E003D82CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFC1F6D12848D77E003D82CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFC1F6D62848D77E003D82CF /* concordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = concordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFC1F6DA2848D77E003D82CF /* concordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = concordTests.swift; sourceTree = "<group>"; };
 		DFC1F6E02848D77E003D82CF /* concordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = concordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC1F6E42848D77E003D82CF /* concordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = concordUITests.swift; sourceTree = "<group>"; };
 		DFC1F6E62848D77E003D82CF /* concordUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = concordUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -80,6 +90,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF36C31C2850BF7C0083E575 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DF36C31F2850C04E0083E575 /* Main.storyboard */,
+				DF36C3282850C9650083E575 /* CardTableViewCell.xib */,
+				DF36C32C2850EAA60083E575 /* CreateServerViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DF36C31D2850BF9E0083E575 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DF36C32B2850EAA60083E575 /* CreateServerViewController.swift */,
+				DF36C3212850C0AC0083E575 /* FeedTableViewController.swift */,
+				DF36C3272850C9650083E575 /* CardTableViewCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DF36C31E2850BFAA0083E575 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DF36C3252850C8020083E575 /* FeedService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		DFC1F6B72848D77C003D82CF = {
 			isa = PBXGroup;
 			children = (
@@ -103,11 +141,12 @@
 		DFC1F6C22848D77C003D82CF /* concord */ = {
 			isa = PBXGroup;
 			children = (
-				DFC1F6F32848EEA2003D82CF /* Model */,
+				DF36C31E2850BFAA0083E575 /* Services */,
+				DF36C31D2850BF9E0083E575 /* Controllers */,
+				DF36C31C2850BF7C0083E575 /* Views */,
+				DFC1F6F32848EEA2003D82CF /* Models */,
 				DFC1F6C32848D77C003D82CF /* AppDelegate.swift */,
 				DFC1F6C52848D77C003D82CF /* SceneDelegate.swift */,
-				DFC1F6C72848D77C003D82CF /* ViewController.swift */,
-				DFC1F6C92848D77C003D82CF /* Main.storyboard */,
 				DFC1F6CC2848D77E003D82CF /* Assets.xcassets */,
 				DFC1F6CE2848D77E003D82CF /* LaunchScreen.storyboard */,
 				DFC1F6D12848D77E003D82CF /* Info.plist */,
@@ -118,8 +157,7 @@
 		DFC1F6D92848D77E003D82CF /* concordTests */ = {
 			isa = PBXGroup;
 			children = (
-				DFC1F6DA2848D77E003D82CF /* concordTests.swift */,
-				DF6881F8284A382D00DCBA3E /* trash.swift */,
+				DF2D0E50284E4AC600B735E9 /* CardTests.swift */,
 			);
 			path = concordTests;
 			sourceTree = "<group>";
@@ -133,12 +171,13 @@
 			path = concordUITests;
 			sourceTree = "<group>";
 		};
-		DFC1F6F32848EEA2003D82CF /* Model */ = {
+		DFC1F6F32848EEA2003D82CF /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				DFC1F6F42848EEC4003D82CF /* Card.swift */,
+				DF36C3232850C4150083E575 /* Tag.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +187,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFC1F6EA2848D77E003D82CF /* Build configuration list for PBXNativeTarget "concord" */;
 			buildPhases = (
+				DF2D0E4F284E482500B735E9 /* Run Script */,
+				DF2D0E52284E4C1A00B735E9 /* ShellScript */,
 				DFC1F6BC2848D77C003D82CF /* Sources */,
 				DFC1F6BD2848D77C003D82CF /* Frameworks */,
 				DFC1F6BE2848D77C003D82CF /* Resources */,
@@ -246,8 +287,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFC1F6D02848D77E003D82CF /* LaunchScreen.storyboard in Resources */,
+				DF36C3202850C04E0083E575 /* Main.storyboard in Resources */,
+				DF36C32E2850EAA60083E575 /* CreateServerViewController.xib in Resources */,
 				DFC1F6CD2848D77E003D82CF /* Assets.xcassets in Resources */,
-				DFC1F6CB2848D77C003D82CF /* Main.storyboard in Resources */,
+				DF36C32A2850C9650083E575 /* CardTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,15 +310,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DF2D0E4F284E482500B735E9 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n    swiftlint concord/*\nelse\necho \"warning: Swiftlint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		DF2D0E52284E4C1A00B735E9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n    swiftlint concordTests/*\nelse\necho \"warning: Swiftlint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DFC1F6BC2848D77C003D82CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFC1F6C82848D77C003D82CF /* ViewController.swift in Sources */,
 				DFC1F6C42848D77C003D82CF /* AppDelegate.swift in Sources */,
 				DFC1F6C62848D77C003D82CF /* SceneDelegate.swift in Sources */,
+				DF36C32D2850EAA60083E575 /* CreateServerViewController.swift in Sources */,
+				DF36C3242850C4150083E575 /* Tag.swift in Sources */,
 				DFC1F6F52848EEC4003D82CF /* Card.swift in Sources */,
+				DF36C3222850C0AC0083E575 /* FeedTableViewController.swift in Sources */,
+				DF36C3262850C8020083E575 /* FeedService.swift in Sources */,
+				DF36C3292850C9650083E575 /* CardTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,8 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF6881F9284A382D00DCBA3E /* trash.swift in Sources */,
-				DFC1F6DB2848D77E003D82CF /* concordTests.swift in Sources */,
+				DF2D0E51284E4AC600B735E9 /* CardTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,14 +397,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DFC1F6C92848D77C003D82CF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DFC1F6CA2848D77C003D82CF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DFC1F6CE2848D77E003D82CF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
