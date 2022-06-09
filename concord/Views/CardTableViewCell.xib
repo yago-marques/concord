@@ -65,7 +65,7 @@
                         <rect key="frame" x="16" y="234" width="84" height="31"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                        <buttonConfiguration key="configuration" style="filled" title="Entrar"/>
                         <connections>
                             <action selector="shareServerButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="s97-dm-FLC"/>
                         </connections>

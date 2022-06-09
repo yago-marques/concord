@@ -12,7 +12,7 @@ class FeedService {
     var tagsText: String = ""
     
     var cardList = [
-        Card(image: "teste", name: "Apple academy", description: "Um servidor para estudantes do apple academy", serverUrl: "teste", rate: 4, tags: [Tag(name: "Educação"), Tag(name: "Tecnologia")]),
+        Card(name: "Apple academy", description: "Um servidor para estudantes do apple academy", serverUrl: "teste", rate: 4, tags: [Tag(name: "Educação"), Tag(name: "Tecnologia")]),
     ]
     
     func getTags(at: Int) -> String {
@@ -24,5 +24,8 @@ class FeedService {
         return result
     }
     
-    
+    func addNewCard(name: String, description: String, serverUrl: String, rate: Int, tags: Array<String>) {
+        let newCard = Card(name: name, description: description, serverUrl: serverUrl, rate: rate, tags: tags.map {Tag(name: $0)})
+        cardList.append(newCard)
+    }
 }

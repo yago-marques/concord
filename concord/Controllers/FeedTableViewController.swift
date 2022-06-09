@@ -9,9 +9,8 @@ import UIKit
 
 class FeedTableViewController: UITableViewController, CreateServerViewControllerDelegate {
     
-    // MARK: - Atributos
+    // MARK: - Attributes
     let service = FeedService()
-    
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -21,8 +20,9 @@ class FeedTableViewController: UITableViewController, CreateServerViewController
         tableView.delegate = self
         cardTableViewCells()
         
-        let buttonToAddCard = UIBarButtonItem(title: "Novo servidor", style: .plain, target: self, action: #selector(addServer))
+        let buttonToAddCard = UIBarButtonItem(title: "Novo servidor", style: .plain, target: self, action: #selector(showServerForm))
         navigationItem.rightBarButtonItem = buttonToAddCard
+        
     }
     
     // MARK: - Methods
@@ -54,8 +54,12 @@ class FeedTableViewController: UITableViewController, CreateServerViewController
         self.tableView.register(cardCell, forCellReuseIdentifier: "CardTableViewCell")
     }
     
-    @objc func addServer() {
+    @objc func showServerForm() {
         let CreateServerViewController = CreateServerViewController(delegate: self)
         navigationController?.pushViewController(CreateServerViewController, animated: true)
+    }
+    
+    func addServer(name: String, description: String, serverUrl: String, rate: Int, tags: Array<String>) {
+        
     }
 }

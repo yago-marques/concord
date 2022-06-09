@@ -9,7 +9,6 @@ import Foundation
 
 public class Card {
     private(set) var id = UUID()
-    var image: String
     var name: String
     var description: String
     var serverUrl: String
@@ -17,14 +16,12 @@ public class Card {
     var tags: Array<Tag>
     
     init(
-        image: String,
         name: String,
         description: String,
         serverUrl: String,
         rate: Int,
         tags: Array<Tag>
     ) {
-        self.image = image
         self.name = name
         self.description = description
         self.serverUrl = serverUrl
