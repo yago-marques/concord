@@ -60,6 +60,7 @@ class FeedTableViewController: UITableViewController, CreateServerViewController
     }
     
     func addServer(name: String, description: String, serverUrl: String, rate: Int, tags: Array<String>) {
-        
+        service.addNewCard(name: name, description: description, serverUrl: serverUrl, rate: rate, tags: tags)
+        tableView.reloadData()
     }
 }
