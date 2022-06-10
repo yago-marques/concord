@@ -9,16 +9,24 @@ import Foundation
 
 public class Card {
     private(set) var id = UUID()
-    var image: String?
     var name: String
-    var description: String?
+    var description: String
     var serverUrl: String
+    var rate: Int
+    var tags: Array<Tag>
     
-    init(image: String? = nil, name: String, description: String? = nil, serverUrl: String) {
-        self.image = image
+    init(
+        name: String,
+        description: String,
+        serverUrl: String,
+        rate: Int,
+        tags: Array<Tag>
+    ) {
         self.name = name
         self.description = description
         self.serverUrl = serverUrl
+        self.rate = rate
+        self.tags = tags
     }
 }
 
