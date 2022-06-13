@@ -8,7 +8,7 @@
 import UIKit
 
 protocol CreateServerViewControllerDelegate {
-    func addServer(name: String, description: String, serverUrl: String, rate: Int, tags: Array<String>) 
+    func addServer(name: UITextField?, description: UITextField?, serverUrl: UITextField?, rate: UITextField?, tags: Array<Tag>) 
 }
 
 class CreateServerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NewTagViewControllerDelegate {
@@ -20,10 +20,10 @@ class CreateServerViewController: UIViewController, UITableViewDataSource, UITab
     
     // MARK: - @IBOutlets
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var descriptionTextField: UITextField!
-    @IBOutlet weak var rateTextField: UITextField!
-    @IBOutlet weak var serverUrlTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField?
+    @IBOutlet weak var descriptionTextField: UITextField?
+    @IBOutlet weak var rateTextField: UITextField?
+    @IBOutlet weak var serverUrlTextField: UITextField?
     
     // MARK: - Constructors
     init(delegate: CreateServerViewControllerDelegate) {
@@ -40,6 +40,7 @@ class CreateServerViewController: UIViewController, UITableViewDataSource, UITab
         super.viewDidLoad()
         self.title = "Form"
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
     // MARK: - Methods
@@ -53,6 +54,16 @@ class CreateServerViewController: UIViewController, UITableViewDataSource, UITab
         cell.textLabel?.text = content
         cell.accessoryType = .checkmark
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let possibelCell = tableView.cellForRow(at: indexPath)
+        guard let cell = possibelCell else { return }
+        if cell.accessoryType == .checkmark {
+            cell.accessoryType = .none
+        } else {
+            cell.accessoryType = .checkmark
+        }
     }
     
     // MARK: - Internal methods
@@ -78,6 +89,8 @@ class CreateServerViewController: UIViewController, UITableViewDataSource, UITab
         presentModal()
     }
     @IBAction func createCardButton(_ sender: Any) {
+        delegate?.addServer(name: nameTextField, description: descriptionTextField, serverUrl: serverUrlTextField, rate: rateTextField, tags: service.myTags)
+        navigationController?.popViewController(animated: true)
     }
     
 }
