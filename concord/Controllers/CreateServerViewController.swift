@@ -11,7 +11,7 @@ protocol CreateServerViewControllerDelegate {
     func addServer(name: UITextField?, description: UITextField?, serverUrl: UITextField?, rate: UITextField?, tags: Array<Tag>) 
 }
 
-class CreateServerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NewTagViewControllerDelegate {
+class CreateServerViewController: UIViewController, NewTagViewControllerDelegate {
     
     // MARK: - Attributes
     var delegate: CreateServerViewControllerDelegate?
@@ -39,32 +39,11 @@ class CreateServerViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Form"
+        self.navigationController?.navigationBar.prefersLargeTitles = false
         tableView.dataSource = self
         tableView.delegate = self
     }
     
-    // MARK: - Methods
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        service.myTags.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        let content = service.myTags[indexPath.row].name
-        cell.textLabel?.text = content
-        cell.accessoryType = .checkmark
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let possibelCell = tableView.cellForRow(at: indexPath)
-        guard let cell = possibelCell else { return }
-        if cell.accessoryType == .checkmark {
-            cell.accessoryType = .none
-        } else {
-            cell.accessoryType = .checkmark
-        }
-    }
     
     // MARK: - Internal methods
     private func presentModal() {
@@ -93,4 +72,31 @@ class CreateServerViewController: UIViewController, UITableViewDataSource, UITab
         navigationController?.popViewController(animated: true)
     }
     
+}
+
+extension CreateServerViewController: UITableViewDelegate { }
+
+extension CreateServerViewController: UITableViewDataSource {
+    // MARK: - Methods
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        service.myTags.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        let content = service.myTags[indexPath.row].name
+        cell.textLabel?.text = content
+        cell.accessoryType = .checkmark
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let possibelCell = tableView.cellForRow(at: indexPath)
+        guard let cell = possibelCell else { return }
+        if cell.accessoryType == .checkmark {
+            cell.accessoryType = .none
+        } else {
+            cell.accessoryType = .checkmark
+        }
+    }
 }

@@ -21,7 +21,8 @@ class FeedTableViewController: UITableViewController, CreateServerViewController
         tableView.dataSource = self
         tableView.delegate = self
         cardTableViewCells()
-        
+        self.title = "Concord"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         let buttonToAddCard = UIBarButtonItem(title: "Novo servidor", style: .plain, target: self, action: #selector(showServerForm))
         navigationItem.rightBarButtonItem = buttonToAddCard
         

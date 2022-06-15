@@ -8,9 +8,7 @@
 import UIKit
 
 class FormService {
-    var myTags: Array<Tag> = [
-        Tag(name: "teste")
-    ]
+    var myTags: Array<Tag> = []
     
     func addTag(_ possibleName: UITextField?) {
         
