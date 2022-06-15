@@ -43,19 +43,16 @@ class FeedServiceTests: XCTestCase {
     }
     func testAddNewCard_validInput_addNewCardInList() throws {
         // given
+        let view = UIViewController()
         let user = UITextField()
         user.text = "user"
-        
         let description = UITextField()
         description.text = "description"
-        
         let serverUrl = UITextField()
         serverUrl.text = "serverUrl"
-        
         let rate = UITextField()
         rate.text = "4"
-        
-        let tags: Array<Tag> = []
+        let tags: [Tag] = []
         // When
         let service = FeedService()
         let lastCount = service.cardList.count
@@ -64,8 +61,141 @@ class FeedServiceTests: XCTestCase {
             description: description,
             serverUrl: serverUrl,
             rate: rate,
-            tags: tags)
-        //then
+            tags: tags,
+            controller: view
+        )
+        // then
         XCTAssertTrue(service.cardList.count != lastCount)
+    }
+
+    func testGuardLet_invalidName_throwError() {
+        // given
+        let view = UIViewController()
+        let user = UITextField()
+        let description = UITextField()
+        description.text = "description"
+        let serverUrl = UITextField()
+        serverUrl.text = "serverUrl"
+        let rate = UITextField()
+        rate.text = "4"
+        let tags: [Tag] = []
+        let service = FeedService()
+        let lastListCount = service.cardList.count
+        // when
+        service.addNewCard(
+            name: user,
+            description: description,
+            serverUrl: serverUrl,
+            rate: rate,
+            tags: tags,
+            controller: view
+        )
+        // then
+        XCTAssertEqual(service.cardList.count, lastListCount)
+    }
+    
+    func testGuardLet_invalidDescription_throwError() {
+        // given
+        let view = UIViewController()
+        let user = UITextField()
+        user.text = "user"
+        let description = UITextField()
+        let serverUrl = UITextField()
+        serverUrl.text = "serverUrl"
+        let rate = UITextField()
+        rate.text = "4"
+        let tags: [Tag] = []
+        let service = FeedService()
+        let lastListCount = service.cardList.count
+        // when
+        service.addNewCard(
+            name: user,
+            description: description,
+            serverUrl: serverUrl,
+            rate: rate,
+            tags: tags,
+            controller: view
+        )
+        // then
+        XCTAssertEqual(service.cardList.count, lastListCount)
+    }
+    
+    func testGuardLet_invalidUrl_throwError() {
+        // given
+        let view = UIViewController()
+        let user = UITextField()
+        user.text = "user"
+        let description = UITextField()
+        description.text = "description"
+        let serverUrl = UITextField()
+        let rate = UITextField()
+        rate.text = "4"
+        let tags: [Tag] = []
+        let service = FeedService()
+        let lastListCount = service.cardList.count
+        // when
+        service.addNewCard(
+            name: user,
+            description: description,
+            serverUrl: serverUrl,
+            rate: rate,
+            tags: tags,
+            controller: view
+        )
+        // then
+        XCTAssertEqual(service.cardList.count, lastListCount)
+    }
+    
+    func testGuardLet_invalidRate_throwError() {
+        // given
+        let view = UIViewController()
+        let user = UITextField()
+        user.text = "user"
+        let description = UITextField()
+        description.text = "description"
+        let serverUrl = UITextField()
+        serverUrl.text = "url"
+        let rate = UITextField()
+        rate.text = "teste"
+        let tags: [Tag] = []
+        let service = FeedService()
+        let lastListCount = service.cardList.count
+        // when
+        service.addNewCard(
+            name: user,
+            description: description,
+            serverUrl: serverUrl,
+            rate: rate,
+            tags: tags,
+            controller: view
+        )
+        // then
+        XCTAssertEqual(service.cardList.count, lastListCount)
+    }
+    
+    func testGuardLet_invalidPossibleRate_throwError() {
+        // given
+        let view = UIViewController()
+        let user = UITextField()
+        user.text = "user"
+        let description = UITextField()
+        description.text = "description"
+        let serverUrl = UITextField()
+        serverUrl.text = "url"
+        let rate = UITextField()
+        let tags: [Tag] = []
+        let service = FeedService()
+        let lastListCount = service.cardList.count
+        // when
+        service.addNewCard(
+            name: user,
+            description: description,
+            serverUrl: serverUrl,
+            rate: rate,
+            tags: tags,
+            controller: view
+        )
+        // then
+        XCTAssertEqual(service.cardList.count, lastListCount)
     }
 }
