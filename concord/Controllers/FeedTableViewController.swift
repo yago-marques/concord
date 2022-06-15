@@ -63,7 +63,7 @@ class FeedTableViewController: UITableViewController, CreateServerViewController
     }
     
     func addServer(name: UITextField?, description: UITextField?, serverUrl: UITextField?, rate: UITextField?, tags: Array<Tag>) {
-        service.addNewCard(name: name, description: description, serverUrl: serverUrl, rate: rate, tags: tags)
+        service.addNewCard(name: name, description: description, serverUrl: serverUrl, rate: rate, tags: tags, controller: self)
         tableView.reloadData()
     }
 }

@@ -24,13 +24,28 @@ class FeedService {
         return result
     }
     
-    func addNewCard(name: UITextField?, description: UITextField?, serverUrl: UITextField?, rate: UITextField?, tags: Array<Tag>) {
-        
-        guard let cardName = name?.text else { return }
-        guard let cardDescription = description?.text else { return }
-        guard let cardUrl = serverUrl?.text else { return }
-        guard let possibleCardRate = rate?.text else { return }
-        guard let cardRate = Int(possibleCardRate) else { return }
+    func addNewCard(name: UITextField?, description: UITextField?, serverUrl: UITextField?, rate: UITextField?, tags: Array<Tag>, controller: UIViewController) {
+
+        guard let cardName = name?.text, cardName != "" else {
+            ErrorAlertView(message: "Preencha o campo nome", controller: controller, defaultActionName: "OK").showWithoutHandler()
+            return
+        }
+        guard let cardDescription = description?.text, cardDescription != "" else {
+            ErrorAlertView(message: "Preencha o campo descrição", controller: controller, defaultActionName: "OK").showWithoutHandler()
+            return
+        }
+        guard let cardUrl = serverUrl?.text, cardUrl != "" else {
+            ErrorAlertView(message: "Preencha o campo Link", controller: controller, defaultActionName: "OK").showWithoutHandler()
+            return
+        }
+        guard let possibleCardRate = rate?.text, possibleCardRate != "" else {
+            ErrorAlertView(message: "Avaliação vazia", controller: controller, defaultActionName: "OK").showWithoutHandler()
+            return
+        }
+        guard let cardRate = Int(possibleCardRate) else {
+            ErrorAlertView(message: "Avaliação inválida", controller: controller, defaultActionName: "OK").showWithoutHandler()
+            return
+        }
         
         let newCard = Card(name: cardName, description: cardDescription, serverUrl: cardUrl, rate: cardRate, tags: tags)
         cardList.append(newCard)
