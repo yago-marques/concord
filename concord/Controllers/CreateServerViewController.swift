@@ -8,10 +8,10 @@
 import UIKit
 
 protocol CreateServerViewControllerDelegate {
-    func addServer(name: String, description: String, serverUrl: String, rate: Int, tags: Array<String>) 
+    func addServer(name: UITextField?, description: UITextField?, serverUrl: UITextField?, rate: UITextField?, tags: Array<Tag>) 
 }
 
-class CreateServerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NewTagViewControllerDelegate {
+class CreateServerViewController: UIViewController, NewTagViewControllerDelegate {
     
     // MARK: - Attributes
     var delegate: CreateServerViewControllerDelegate?
@@ -20,10 +20,10 @@ class CreateServerViewController: UIViewController, UITableViewDataSource, UITab
     
     // MARK: - @IBOutlets
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var descriptionTextField: UITextField!
-    @IBOutlet weak var rateTextField: UITextField!
-    @IBOutlet weak var serverUrlTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField?
+    @IBOutlet weak var descriptionTextField: UITextField?
+    @IBOutlet weak var rateTextField: UITextField?
+    @IBOutlet weak var serverUrlTextField: UITextField?
     
     // MARK: - Constructors
     init(delegate: CreateServerViewControllerDelegate) {
@@ -39,21 +39,11 @@ class CreateServerViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Form"
+        self.navigationController?.navigationBar.prefersLargeTitles = false
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
-    // MARK: - Methods
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        service.myTags.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        let content = service.myTags[indexPath.row].name
-        cell.textLabel?.text = content
-        cell.accessoryType = .checkmark
-        return cell
-    }
     
     // MARK: - Internal methods
     private func presentModal() {
@@ -78,6 +68,35 @@ class CreateServerViewController: UIViewController, UITableViewDataSource, UITab
         presentModal()
     }
     @IBAction func createCardButton(_ sender: Any) {
+        delegate?.addServer(name: nameTextField, description: descriptionTextField, serverUrl: serverUrlTextField, rate: rateTextField, tags: service.myTags)
+        navigationController?.popViewController(animated: true)
     }
     
+}
+
+extension CreateServerViewController: UITableViewDelegate { }
+
+extension CreateServerViewController: UITableViewDataSource {
+    // MARK: - Methods
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        service.myTags.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        let content = service.myTags[indexPath.row].name
+        cell.textLabel?.text = content
+        cell.accessoryType = .checkmark
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let possibelCell = tableView.cellForRow(at: indexPath)
+        guard let cell = possibelCell else { return }
+        if cell.accessoryType == .checkmark {
+            cell.accessoryType = .none
+        } else {
+            cell.accessoryType = .checkmark
+        }
+    }
 }

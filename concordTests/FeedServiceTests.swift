@@ -12,7 +12,6 @@ import StoreKitTest
 class FeedServiceTests: XCTestCase {
 
     // given
-    let image = "this is a image"
     let user = "user name"
     let explanation = "this is a description"
     let serverUrl = "www.servershare.com"
@@ -21,7 +20,6 @@ class FeedServiceTests: XCTestCase {
     func testInit_validInput_createNewFeedService() throws {
         // when
         let cardTest = Card(
-            image: image,
             name: user,
             description: explanation,
             serverUrl: serverUrl,
@@ -30,7 +28,6 @@ class FeedServiceTests: XCTestCase {
         let tagsText = "this is a test"
         let cardList = [cardTest]
         // then
-        XCTAssertEqual(cardTest.image, "this is a image")
         XCTAssertEqual(cardTest.name, "user name")
         XCTAssertEqual(cardTest.description, "this is a description")
         XCTAssertEqual(cardTest.serverUrl, "www.servershare.com")
