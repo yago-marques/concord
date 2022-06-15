@@ -11,15 +11,18 @@ class FeedTableViewController: UITableViewController, CreateServerViewController
     
     // MARK: - Attributes
     let service = FeedService()
-    
+//    let screenSize = UIScreen.main.bounds
+
+   
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        print(screenSize.height - 50)
         tableView.dataSource = self
         tableView.delegate = self
         cardTableViewCells()
-        
+        self.title = "Concord"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         let buttonToAddCard = UIBarButtonItem(title: "Novo servidor", style: .plain, target: self, action: #selector(showServerForm))
         navigationItem.rightBarButtonItem = buttonToAddCard
         
@@ -59,7 +62,7 @@ class FeedTableViewController: UITableViewController, CreateServerViewController
         navigationController?.pushViewController(CreateServerViewController, animated: true)
     }
     
-    func addServer(name: String, description: String, serverUrl: String, rate: Int, tags: Array<String>) {
+    func addServer(name: UITextField?, description: UITextField?, serverUrl: UITextField?, rate: UITextField?, tags: Array<Tag>) {
         service.addNewCard(name: name, description: description, serverUrl: serverUrl, rate: rate, tags: tags)
         tableView.reloadData()
     }

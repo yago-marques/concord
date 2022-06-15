@@ -48,6 +48,8 @@ class NewTagViewController: UIViewController {
         if service.TextField(for: tagNameTextField) != "" {
             delegate.addTag(name: tagNameTextField)
             tagNameTextField?.text = ""
+        } else {
+            ErrorAlertView(message: "Tag vazia", controller: self, defaultActionName: "OK").showWithoutHandler()
         }
     }
     

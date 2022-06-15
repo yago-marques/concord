@@ -5,7 +5,7 @@
 //  Created by Yago Marques on 08/06/22.
 //
 
-import Foundation
+import UIKit
 
 class FeedService {
     
@@ -24,8 +24,15 @@ class FeedService {
         return result
     }
     
-    func addNewCard(name: String, description: String, serverUrl: String, rate: Int, tags: Array<String>) {
-        let newCard = Card(name: name, description: description, serverUrl: serverUrl, rate: rate, tags: tags.map {Tag(name: $0)})
+    func addNewCard(name: UITextField?, description: UITextField?, serverUrl: UITextField?, rate: UITextField?, tags: Array<Tag>) {
+        
+        guard let cardName = name?.text else { return }
+        guard let cardDescription = description?.text else { return }
+        guard let cardUrl = serverUrl?.text else { return }
+        guard let possibleCardRate = rate?.text else { return }
+        guard let cardRate = Int(possibleCardRate) else { return }
+        
+        let newCard = Card(name: cardName, description: cardDescription, serverUrl: cardUrl, rate: cardRate, tags: tags)
         cardList.append(newCard)
     }
 }
