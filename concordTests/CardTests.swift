@@ -20,11 +20,6 @@ class CardTests: XCTestCase {
     func testInit_validInputWithName_createNewCard() throws {
         // when
         let cardTestName = Card(
-    let tags: [Tag] = []
-
-    func testInit_validInputWithName_createNewCard() throws {
-        // when
-        let cardTestName = Card(
             name: user,
             description: explanation,
             serverUrl: serverUrl,
@@ -91,3 +86,4 @@ class CardTests: XCTestCase {
         XCTAssertTrue(cardTestId.id.uuidString != "")
     }
 }
+

@@ -17,12 +17,11 @@ class FormServiceTest: XCTestCase {
         let myTagsTest = FormService()
         XCTAssertEqual(isEqual(Array<Tag>(_immutableCocoaArray: myTagsTest).self), false)
     }
-    func testAddTag_validInput_addNewMyTagsInList() throws {
+    func testAddTag_validInput_addNewTagInList() throws {
         // given
         let myTags: Array<Tag> = []
         // when
         let service = FormService()
-        let lastService = service.addTag
         // then
         XCTAssertEqual(isEqual(Array(myTags).self), false)
     }

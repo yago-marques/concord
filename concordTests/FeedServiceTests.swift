@@ -17,10 +17,10 @@ class FeedServiceTests: XCTestCase {
     let serverUrl = "www.servershare.com"
     let rate = 0
     let tags: Array<Tag> = []
+    
     func testInit_validInput_createNewFeedService() throws {
         // when
         let cardTest = Card(
-
             name: user,
             description: explanation,
             serverUrl: serverUrl,
@@ -43,11 +43,19 @@ class FeedServiceTests: XCTestCase {
     }
     func testAddNewCard_validInput_addNewCardInList() throws {
         // given
-        let user = "user name"
-        let description = "testing"
-        let serverUrl = "www.testing.com"
-        let rate = 4
-        let tags: Array<String> = []
+        let user = UITextField()
+        user.text = "user"
+        
+        let description = UITextField()
+        description.text = "description"
+        
+        let serverUrl = UITextField()
+        serverUrl.text = "serverUrl"
+        
+        let rate = UITextField()
+        rate.text = "4"
+        
+        let tags: Array<Tag> = []
         // When
         let service = FeedService()
         let lastCount = service.cardList.count
