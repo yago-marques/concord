@@ -43,6 +43,8 @@ class FeedServiceTests: XCTestCase {
     }
     func testAddNewCard_validInput_addNewCardInList() throws {
         // given
+        let view = UIViewController()
+        
         let user = UITextField()
         user.text = "user"
         
@@ -64,7 +66,9 @@ class FeedServiceTests: XCTestCase {
             description: description,
             serverUrl: serverUrl,
             rate: rate,
-            tags: tags)
+            tags: tags,
+            controller: view
+        )
         //then
         XCTAssertTrue(service.cardList.count != lastCount)
     }
