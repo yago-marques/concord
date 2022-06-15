@@ -11,13 +11,10 @@ class FeedTableViewController: UITableViewController, CreateServerViewController
     
     // MARK: - Attributes
     let service = FeedService()
-//    let screenSize = UIScreen.main.bounds
-
    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-//        print(screenSize.height - 50)
         tableView.dataSource = self
         tableView.delegate = self
         cardTableViewCells()
