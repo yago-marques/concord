@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		14D6A38228522309001056BD /* FeedServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6A38128522309001056BD /* FeedServiceTests.swift */; };
 		14D6A3842852239D001056BD /* TagsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6A3832852239D001056BD /* TagsTests.swift */; };
+		14D6A3862853A3CC001056BD /* FormServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6A3852853A3CC001056BD /* FormServiceTest.swift */; };
 		DF2D0E51284E4AC600B735E9 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2D0E50284E4AC600B735E9 /* CardTests.swift */; };
 		DF36C3202850C04E0083E575 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF36C31F2850C04E0083E575 /* Main.storyboard */; };
 		DF36C3222850C0AC0083E575 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF36C3212850C0AC0083E575 /* FeedTableViewController.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		14D6A38128522309001056BD /* FeedServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedServiceTests.swift; sourceTree = "<group>"; };
 		14D6A3832852239D001056BD /* TagsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsTests.swift; sourceTree = "<group>"; };
+		14D6A3852853A3CC001056BD /* FormServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormServiceTest.swift; sourceTree = "<group>"; };
 		DF2D0E50284E4AC600B735E9 /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
 		DF36C31F2850C04E0083E575 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DF36C3212850C0AC0083E575 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				DF2D0E50284E4AC600B735E9 /* CardTests.swift */,
 				14D6A38128522309001056BD /* FeedServiceTests.swift */,
 				14D6A3832852239D001056BD /* TagsTests.swift */,
+				14D6A3852853A3CC001056BD /* FormServiceTest.swift */,
 			);
 			path = concordTests;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF2D0E51284E4AC600B735E9 /* CardTests.swift in Sources */,
+				14D6A3862853A3CC001056BD /* FormServiceTest.swift in Sources */,
 				14D6A38228522309001056BD /* FeedServiceTests.swift in Sources */,
 				14D6A3842852239D001056BD /* TagsTests.swift in Sources */,
 			);
