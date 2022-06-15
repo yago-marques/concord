@@ -6,7 +6,7 @@
 //
 
 
-import XCTest
+/*import XCTest
 @testable import concord
 
 class concordUITests: XCTestCase {
@@ -23,11 +23,15 @@ class concordUITests: XCTestCase {
        
     }
 
-    func testExample() throws {
+   /* func testShowButtonDisplays() throws {
         let app = XCUIApplication()
         app.launch()
-
-    }
+        let window = app.windows
+        XCTAssertFalse(window.staticTexts[""].exists)
+        let showButton = window.buttons[""]
+        //showButton.click()
+        XCTAssertTrue(window.staticTexts[""].exists)
+    } */
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
@@ -37,4 +41,4 @@ class concordUITests: XCTestCase {
             }
         }
     }
-}
+}*/

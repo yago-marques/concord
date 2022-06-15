@@ -15,6 +15,11 @@ class CardTests: XCTestCase {
     let explanation = "this is a description"
     let serverUrl = "www.servershare.com"
     let rate = 0
+    let tags: Array<Tag> = []
+    
+    func testInit_validInputWithName_createNewCard() throws {
+        // when
+        let cardTestName = Card(
     let tags: [Tag] = []
 
     func testInit_validInputWithName_createNewCard() throws {
