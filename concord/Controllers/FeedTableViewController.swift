@@ -18,11 +18,17 @@ class FeedTableViewController: UITableViewController, CreateServerViewController
         tableView.dataSource = self
         tableView.delegate = self
         cardTableViewCells()
-        self.title = "Concord"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
         let buttonToAddCard = UIBarButtonItem(title: "Novo servidor", style: .plain, target: self, action: #selector(showServerForm))
         navigationItem.rightBarButtonItem = buttonToAddCard
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = "Concord"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.title = ""
     }
     
     // MARK: - Methods
@@ -45,6 +51,17 @@ class FeedTableViewController: UITableViewController, CreateServerViewController
         }
         
         return UITableViewCell()
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = Bundle.main.loadNibNamed("HeaderTableView", owner: self)?.first as! HeaderTableView
+        headerView.headerConfig()
+        
+        return headerView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 150
     }
     
     // MARK: - Internal Methods

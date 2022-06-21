@@ -11,12 +11,12 @@ protocol CreateServerViewControllerDelegate {
     func addServer(name: UITextField?, description: UITextField?, serverUrl: UITextField?, rate: UITextField?, tags: Array<Tag>) 
 }
 
-class CreateServerViewController: UIViewController, NewTagViewControllerDelegate {
+class CreateServerViewController: UIViewController {
     
     // MARK: - Attributes
     var delegate: CreateServerViewControllerDelegate?
     lazy var addTagModal = NewTagViewController(delegate: self)
-    let service = FormService()
+    lazy var service = FormService(delegate: self)
     
     // MARK: - @IBOutlets
     @IBOutlet weak var tableView: UITableView!
@@ -38,8 +38,7 @@ class CreateServerViewController: UIViewController, NewTagViewControllerDelegate
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Form"
-        self.navigationController?.navigationBar.prefersLargeTitles = false
+        self.title = "Novo servidor"
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -57,10 +56,8 @@ class CreateServerViewController: UIViewController, NewTagViewControllerDelegate
         }
     }
     
-    func addTag(name: UITextField?) {
-        service.addTag(name)
-        dismiss(animated: true)
-        tableView.reloadData()
+    @objc private func showDeleteModal(_ gesture: UIGestureRecognizer) {
+        print("here")
     }
     
     // MARK: - @IBActions
@@ -85,8 +82,10 @@ extension CreateServerViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         let content = service.myTags[indexPath.row].name
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(showDeleteModal))
         cell.textLabel?.text = content
         cell.accessoryType = .checkmark
+        cell.addGestureRecognizer(longPress)
         return cell
     }
     
@@ -95,8 +94,20 @@ extension CreateServerViewController: UITableViewDataSource {
         guard let cell = possibelCell else { return }
         if cell.accessoryType == .checkmark {
             cell.accessoryType = .none
-        } else {
-            cell.accessoryType = .checkmark
+            service.myTags.remove(at: indexPath.row)
         }
+    }
+}
+
+extension CreateServerViewController: NewTagViewControllerDelegate {
+    func addTag(name: UITextField?) {
+        service.addTag(name)
+        dismiss(animated: true)
+    }
+}
+
+extension CreateServerViewController: FormServiceDelegate {
+    func update() {
+        tableView.reloadData()
     }
 }

@@ -7,8 +7,21 @@
 
 import UIKit
 
+protocol FormServiceDelegate {
+    func update()
+}
+
 class FormService {
-    var myTags: Array<Tag> = []
+    let delegate: FormServiceDelegate?
+    var myTags: Array<Tag> = [] {
+        didSet {
+            delegate?.update()
+        }
+    }
+    
+    init(delegate: FormServiceDelegate? = nil) {
+        self.delegate = delegate
+    }
     
     func addTag(_ possibleName: UITextField?) {
         
