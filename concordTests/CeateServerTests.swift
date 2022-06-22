@@ -19,7 +19,7 @@ class CeateServerTests: XCTestCase {
                 description: UITextField?,
                 serverUrl: UITextField?,
                 rate: UITextField?,
-                tags: Array<Tag>
+                tags: [Tag]
             ) {
                 target = true
             }

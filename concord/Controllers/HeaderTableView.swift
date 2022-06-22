@@ -12,15 +12,13 @@ class HeaderTableView: UIView {
     @IBOutlet weak var HeaderBgView: UIView!
     @IBOutlet weak var mainShapeView: UIView!
     @IBOutlet weak var rightShapeView: UIView!
-    
-    private let color = Colors()
-    
+        
     func headerConfig() {
-        HeaderBgView.backgroundColor = color.secondaryColor
+        HeaderBgView.backgroundColor = Colors.secondaryColor
         
-        mainShapeView.backgroundColor = color.primaryDarkColor
+        mainShapeView.backgroundColor = Colors.primaryDarkColor
         
-        rightShapeView.backgroundColor = color.primaryLightColor
+        rightShapeView.backgroundColor = Colors.primaryLightColor
         
         HeaderBgView.layer.cornerRadius = 2500
         HeaderBgView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]

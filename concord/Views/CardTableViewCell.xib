@@ -103,8 +103,11 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="descriptionTextView" destination="v5c-1H-Z0a" id="e8A-xe-yeI"/>
+                <outlet property="enterButton" destination="dZK-GZ-qKi" id="TeZ-U6-1Ay"/>
+                <outlet property="evaluateButton" destination="uif-5d-fbv" id="nOr-U0-Zcd"/>
                 <outlet property="nameLabel" destination="Tw8-Ob-wGe" id="cJI-Ld-mfK"/>
                 <outlet property="rateLabel" destination="qWM-v8-8je" id="FaK-Mn-hni"/>
+                <outlet property="rateNameLabel" destination="il4-uX-5qg" id="B0Y-2D-ZLe"/>
                 <outlet property="tagsTextView" destination="mK9-BF-N5u" id="GDS-hq-xWg"/>
             </connections>
             <point key="canvasLocation" x="122.46376811594205" y="197.20982142857142"/>
