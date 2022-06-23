@@ -2,7 +2,7 @@
 //  concordUITestsLaunchTests.swift
 //  concordUITests
 //
-//  Created by Yago Marques on 02/06/22.
+//  Created by Marcelo De Araújo on 02/06/22.
 //
 
 import XCTest

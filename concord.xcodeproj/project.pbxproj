@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1451618F2861F9E800DACEBD /* FeedTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1451618E2861F9E800DACEBD /* FeedTableViewControllerTests.swift */; };
 		14D6A38228522309001056BD /* FeedServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6A38128522309001056BD /* FeedServiceTests.swift */; };
 		14D6A3842852239D001056BD /* TagsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6A3832852239D001056BD /* TagsTests.swift */; };
 		14D6A3862853A3CC001056BD /* FormServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6A3852853A3CC001056BD /* FormServiceTest.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1451618E2861F9E800DACEBD /* FeedTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewControllerTests.swift; sourceTree = "<group>"; };
 		14D6A38128522309001056BD /* FeedServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedServiceTests.swift; sourceTree = "<group>"; };
 		14D6A3832852239D001056BD /* TagsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsTests.swift; sourceTree = "<group>"; };
 		14D6A3852853A3CC001056BD /* FormServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormServiceTest.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				14D6A3832852239D001056BD /* TagsTests.swift */,
 				14D6A3852853A3CC001056BD /* FormServiceTest.swift */,
 				DF1E6F82285A22BE00749FF7 /* CeateServerTests.swift */,
+				1451618E2861F9E800DACEBD /* FeedTableViewControllerTests.swift */,
 			);
 			path = concordTests;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				DF1E6F83285A22BE00749FF7 /* CeateServerTests.swift in Sources */,
 				14D6A38228522309001056BD /* FeedServiceTests.swift in Sources */,
 				14D6A3842852239D001056BD /* TagsTests.swift in Sources */,
+				1451618F2861F9E800DACEBD /* FeedTableViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
