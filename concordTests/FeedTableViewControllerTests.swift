@@ -18,8 +18,7 @@ class FeedTableViewControllerTests: XCTestCase {
                 name: UITextField?,
                 description: UITextField?,
                 serverUrl: UITextField?,
-                rate: UITextField?,
-                tags: Array<Tag>) {
+                tags: [Tag]) {
                     target = true
             }
         }
@@ -39,10 +38,8 @@ class FeedTableViewControllerTests: XCTestCase {
             name: user,
             description: description,
             serverUrl: serverUrl,
-            rate: rate,
             tags: tags)
         XCTAssertTrue(mock.target)
-        
     }
 
 }

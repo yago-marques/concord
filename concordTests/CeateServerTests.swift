@@ -18,7 +18,6 @@ class CeateServerTests: XCTestCase {
                 name: UITextField?,
                 description: UITextField?,
                 serverUrl: UITextField?,
-                rate: UITextField?,
                 tags: [Tag]
             ) {
                 target = true
@@ -40,7 +39,6 @@ class CeateServerTests: XCTestCase {
             name: user,
             description: description,
             serverUrl: serverUrl,
-            rate: rate,
             tags: tags
         )
         // then

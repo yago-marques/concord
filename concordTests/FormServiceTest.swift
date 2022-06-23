@@ -16,7 +16,7 @@ class FormServiceTest: XCTestCase {
     func testInit_validInputWithMyTags_createNewFormService() throws {
         // when
         let myTagsTest = FormService()
-        XCTAssertEqual(isEqual(Array<Tag>(_immutableCocoaArray: myTagsTest).self), false)
+        XCTAssertEqual(isEqual([Tag](_immutableCocoaArray: myTagsTest).self), false)
     }
 
     func testAddTag_validInput_addNewTagInList() throws {

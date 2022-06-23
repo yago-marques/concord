@@ -7,17 +7,15 @@
 
 import XCTest
 @testable import concord
-import StoreKitTest
 
 class FeedServiceTests: XCTestCase {
-
     // given
     let user = "user name"
     let explanation = "this is a description"
     let serverUrl = "www.servershare.com"
     let rate = 0
-    let tags: Array<Tag> = []
-    
+    let tags: [Tag] = []
+
     func testInit_validInput_createNewFeedService() throws {
         // when
         let cardTest = Card(
@@ -60,7 +58,6 @@ class FeedServiceTests: XCTestCase {
             name: user,
             description: description,
             serverUrl: serverUrl,
-            rate: rate,
             tags: tags,
             controller: view
         )
@@ -86,14 +83,13 @@ class FeedServiceTests: XCTestCase {
             name: user,
             description: description,
             serverUrl: serverUrl,
-            rate: rate,
             tags: tags,
             controller: view
         )
         // then
         XCTAssertEqual(service.cardList.count, lastListCount)
     }
-    
+
     func testGuardLet_invalidDescription_throwError() {
         // given
         let view = UIViewController()
@@ -112,14 +108,13 @@ class FeedServiceTests: XCTestCase {
             name: user,
             description: description,
             serverUrl: serverUrl,
-            rate: rate,
             tags: tags,
             controller: view
         )
         // then
         XCTAssertEqual(service.cardList.count, lastListCount)
     }
-    
+
     func testGuardLet_invalidUrl_throwError() {
         // given
         let view = UIViewController()
@@ -138,60 +133,6 @@ class FeedServiceTests: XCTestCase {
             name: user,
             description: description,
             serverUrl: serverUrl,
-            rate: rate,
-            tags: tags,
-            controller: view
-        )
-        // then
-        XCTAssertEqual(service.cardList.count, lastListCount)
-    }
-    
-    func testGuardLet_invalidRate_throwError() {
-        // given
-        let view = UIViewController()
-        let user = UITextField()
-        user.text = "user"
-        let description = UITextField()
-        description.text = "description"
-        let serverUrl = UITextField()
-        serverUrl.text = "url"
-        let rate = UITextField()
-        rate.text = "teste"
-        let tags: [Tag] = []
-        let service = FeedService()
-        let lastListCount = service.cardList.count
-        // when
-        service.addNewCard(
-            name: user,
-            description: description,
-            serverUrl: serverUrl,
-            rate: rate,
-            tags: tags,
-            controller: view
-        )
-        // then
-        XCTAssertEqual(service.cardList.count, lastListCount)
-    }
-    
-    func testGuardLet_invalidPossibleRate_throwError() {
-        // given
-        let view = UIViewController()
-        let user = UITextField()
-        user.text = "user"
-        let description = UITextField()
-        description.text = "description"
-        let serverUrl = UITextField()
-        serverUrl.text = "url"
-        let rate = UITextField()
-        let tags: [Tag] = []
-        let service = FeedService()
-        let lastListCount = service.cardList.count
-        // when
-        service.addNewCard(
-            name: user,
-            description: description,
-            serverUrl: serverUrl,
-            rate: rate,
             tags: tags,
             controller: view
         )
