@@ -2,16 +2,14 @@
 //  concordUITests.swift
 //  concordUITests
 //
-//  Created by Marcelo De Araújo on 09/06/2022
+//  Created by Marcelo De Araújo on 09/06/22
 //
 
 
-/* import XCTest
+import XCTest
 @testable import concord
 
 class concordUITests: XCTestCase {
-    
-    let app = XCUIApplication()
 
     override func setUpWithError() throws {
         XCTAssertTrue(true)
@@ -23,15 +21,23 @@ class concordUITests: XCTestCase {
        
     }
 
-    func testShowButtonDisplays() throws {
+    /* func testButtonDisplays() throws {
         let app = XCUIApplication()
         app.launch()
+
         let window = app.windows
-        XCTAssertFalse(window.staticTexts[""].exists)
-        let showButton = window.buttons[""]
-        //showButton.click()
-        XCTAssertTrue(window.staticTexts[""].exists)
-    }
+
+        XCTAssertFalse(window.staticTexts["OK"].exists)
+
+        let button = window.buttons["Novo servidor"]
+
+        button.click()
+
+        XCTAssertTrue(window.staticTexts["Novo servidor"].exists)
+
+        // XCTAssertTrue(app.otherElements.element.exists)
+
+    } */
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
@@ -41,4 +47,4 @@ class concordUITests: XCTestCase {
             }
         }
     }
-} */
+}
