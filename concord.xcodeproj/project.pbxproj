@@ -22,6 +22,11 @@
 		DF36C32A2850C9650083E575 /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF36C3282850C9650083E575 /* CardTableViewCell.xib */; };
 		DF36C32D2850EAA60083E575 /* CreateServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF36C32B2850EAA60083E575 /* CreateServerViewController.swift */; };
 		DF36C32E2850EAA60083E575 /* CreateServerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF36C32C2850EAA60083E575 /* CreateServerViewController.xib */; };
+		DF5C1811285FB6F80099A82E /* HeaderTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5C1810285FB6F80099A82E /* HeaderTableView.xib */; };
+		DF5C1813285FBA270099A82E /* HeaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5C1812285FBA270099A82E /* HeaderTableView.swift */; };
+		DF5C1815285FC5410099A82E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5C1814285FC5410099A82E /* Colors.swift */; };
+		DFAFAD532863609E00FF9BF8 /* navigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFAD522863609E00FF9BF8 /* navigationController.swift */; };
+		DFB858A428648A3100AB6B83 /* CreateTagHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB858A328648A3100AB6B83 /* CreateTagHeaderView.swift */; };
 		DFBB948B2852186D00146A4F /* FormService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBB948A2852186D00146A4F /* FormService.swift */; };
 		DFC1F6C42848D77C003D82CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1F6C32848D77C003D82CF /* AppDelegate.swift */; };
 		DFC1F6C62848D77C003D82CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1F6C52848D77C003D82CF /* SceneDelegate.swift */; };
@@ -67,6 +72,11 @@
 		DF36C3282850C9650083E575 /* CardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTableViewCell.xib; sourceTree = "<group>"; };
 		DF36C32B2850EAA60083E575 /* CreateServerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateServerViewController.swift; sourceTree = "<group>"; };
 		DF36C32C2850EAA60083E575 /* CreateServerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateServerViewController.xib; sourceTree = "<group>"; };
+		DF5C1810285FB6F80099A82E /* HeaderTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableView.xib; sourceTree = "<group>"; };
+		DF5C1812285FBA270099A82E /* HeaderTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableView.swift; sourceTree = "<group>"; };
+		DF5C1814285FC5410099A82E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		DFAFAD522863609E00FF9BF8 /* navigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationController.swift; sourceTree = "<group>"; };
+		DFB858A328648A3100AB6B83 /* CreateTagHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTagHeaderView.swift; sourceTree = "<group>"; };
 		DFBB948A2852186D00146A4F /* FormService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormService.swift; sourceTree = "<group>"; };
 		DFC1F6C02848D77C003D82CF /* concord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = concord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC1F6C32848D77C003D82CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +126,8 @@
 				DF36C32C2850EAA60083E575 /* CreateServerViewController.xib */,
 				DFCFDC26285143C6000FBFF3 /* NewTagViewController.xib */,
 				DF267FFD2857575F0091DD3A /* ErrorAlertView.swift */,
+				DF5C1810285FB6F80099A82E /* HeaderTableView.xib */,
+				DFB858A328648A3100AB6B83 /* CreateTagHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -127,6 +139,8 @@
 				DF36C3212850C0AC0083E575 /* FeedTableViewController.swift */,
 				DF36C3272850C9650083E575 /* CardTableViewCell.swift */,
 				DFCFDC25285143C6000FBFF3 /* NewTagViewController.swift */,
+				DF5C1812285FBA270099A82E /* HeaderTableView.swift */,
+				DFAFAD522863609E00FF9BF8 /* navigationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -203,6 +217,7 @@
 			children = (
 				DFC1F6F42848EEC4003D82CF /* Card.swift */,
 				DF36C3232850C4150083E575 /* Tag.swift */,
+				DF5C1814285FC5410099A82E /* Colors.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -317,6 +332,7 @@
 				DF36C3202850C04E0083E575 /* Main.storyboard in Resources */,
 				DFCFDC28285143C6000FBFF3 /* NewTagViewController.xib in Resources */,
 				DF36C32E2850EAA60083E575 /* CreateServerViewController.xib in Resources */,
+				DF5C1811285FB6F80099A82E /* HeaderTableView.xib in Resources */,
 				DFC1F6CD2848D77E003D82CF /* Assets.xcassets in Resources */,
 				DF36C32A2850C9650083E575 /* CardTableViewCell.xib in Resources */,
 			);
@@ -387,9 +403,13 @@
 				DFCFDC27285143C6000FBFF3 /* NewTagViewController.swift in Sources */,
 				DF36C3242850C4150083E575 /* Tag.swift in Sources */,
 				DFC1F6F52848EEC4003D82CF /* Card.swift in Sources */,
+				DF5C1813285FBA270099A82E /* HeaderTableView.swift in Sources */,
 				DF267FFE2857575F0091DD3A /* ErrorAlertView.swift in Sources */,
+				DF5C1815285FC5410099A82E /* Colors.swift in Sources */,
 				DF36C3222850C0AC0083E575 /* FeedTableViewController.swift in Sources */,
 				DF36C3262850C8020083E575 /* FeedService.swift in Sources */,
+				DFB858A428648A3100AB6B83 /* CreateTagHeaderView.swift in Sources */,
+				DFAFAD532863609E00FF9BF8 /* navigationController.swift in Sources */,
 				DF36C3292850C9650083E575 /* CardTableViewCell.swift in Sources */,
 				DFBB948B2852186D00146A4F /* FormService.swift in Sources */,
 			);

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FeedTableViewController: UITableViewController, CreateServerViewControllerDelegate {
+class FeedTableViewController: UITableViewController {
     
     // MARK: - Attributes
     let service = FeedService()
@@ -18,12 +18,19 @@ class FeedTableViewController: UITableViewController, CreateServerViewController
         tableView.dataSource = self
         tableView.delegate = self
         cardTableViewCells()
-        self.title = "Concord"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
         let buttonToAddCard = UIBarButtonItem(title: "Novo servidor", style: .plain, target: self, action: #selector(showServerForm))
         navigationItem.rightBarButtonItem = buttonToAddCard
-        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = "Concord"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.title = ""
+    }
+    
     
     // MARK: - Methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,6 +54,17 @@ class FeedTableViewController: UITableViewController, CreateServerViewController
         return UITableViewCell()
     }
     
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = Bundle.main.loadNibNamed("HeaderTableView", owner: self)?.first as! HeaderTableView
+        headerView.headerConfig()
+        
+        return headerView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 150
+    }
+    
     // MARK: - Internal Methods
     private func cardTableViewCells() {
         let cardCell = UINib(nibName: "CardTableViewCell",
@@ -59,8 +77,12 @@ class FeedTableViewController: UITableViewController, CreateServerViewController
         navigationController?.pushViewController(CreateServerViewController, animated: true)
     }
     
-    func addServer(name: UITextField?, description: UITextField?, serverUrl: UITextField?, rate: UITextField?, tags: Array<Tag>) {
-        service.addNewCard(name: name, description: description, serverUrl: serverUrl, rate: rate, tags: tags, controller: self)
+    
+}
+
+extension FeedTableViewController: CreateServerViewControllerDelegate {
+    func addServer(name: UITextField?, description: UITextField?, serverUrl: UITextField?, tags: Array<Tag>) {
+        service.addNewCard(name: name, description: description, serverUrl: serverUrl, tags: tags, controller: self)
         tableView.reloadData()
     }
 }
