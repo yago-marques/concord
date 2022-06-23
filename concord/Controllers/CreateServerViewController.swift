@@ -39,6 +39,9 @@ class CreateServerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Novo servidor"
+        nameTextField?.delegate = self
+        descriptionTextField?.delegate = self
+        serverUrlTextField?.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -132,5 +135,16 @@ extension CreateServerViewController: CreateTagHeaderViewDelegate {
             sheet.preferredCornerRadius = 20
             present(nav, animated: true)
         }
+    }
+}
+
+extension CreateServerViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
