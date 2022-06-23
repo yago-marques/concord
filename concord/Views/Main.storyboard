@@ -38,7 +38,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ZcN-M6-0sq">
             <objects>
-                <navigationController id="S9N-0u-PqX" sceneMemberID="viewController">
+                <navigationController id="S9N-0u-PqX" customClass="navigationController" customModule="concord" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SS8-8B-dd1">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

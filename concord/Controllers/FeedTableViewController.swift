@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FeedTableViewController: UITableViewController, CreateServerViewControllerDelegate {
+class FeedTableViewController: UITableViewController {
     
     // MARK: - Attributes
     let service = FeedService()
@@ -30,6 +30,7 @@ class FeedTableViewController: UITableViewController, CreateServerViewController
         super.viewWillDisappear(animated)
         self.title = ""
     }
+    
     
     // MARK: - Methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -76,8 +77,12 @@ class FeedTableViewController: UITableViewController, CreateServerViewController
         navigationController?.pushViewController(CreateServerViewController, animated: true)
     }
     
-    func addServer(name: UITextField?, description: UITextField?, serverUrl: UITextField?, rate: UITextField?, tags: Array<Tag>) {
-        service.addNewCard(name: name, description: description, serverUrl: serverUrl, rate: rate, tags: tags, controller: self)
+    
+}
+
+extension FeedTableViewController: CreateServerViewControllerDelegate {
+    func addServer(name: UITextField?, description: UITextField?, serverUrl: UITextField?, tags: Array<Tag>) {
+        service.addNewCard(name: name, description: description, serverUrl: serverUrl, tags: tags, controller: self)
         tableView.reloadData()
     }
 }

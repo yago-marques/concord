@@ -29,10 +29,13 @@ class CardTableViewCell: UITableViewCell {
         
         rateLabel.textColor = Colors.primaryColor
         rateNameLabel.textColor = Colors.primaryColor
-        enterButton.tintColor = Colors.secondaryColor
+        enterButton.tintColor = ColorCompatibility.joinButtonColor
         evaluateButton.tintColor = Colors.secondaryLightColor
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        enterButton.tintColor = ColorCompatibility.joinButtonColor
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

@@ -64,7 +64,7 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uif-5d-fbv">
                         <rect key="frame" x="167" y="256" width="132.5" height="31"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="filled" title="Avaliar"/>
+                        <buttonConfiguration key="configuration" style="filled" title="Reportar"/>
                         <connections>
                             <action selector="shareServerButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="SxA-Pn-VjK"/>
                         </connections>
