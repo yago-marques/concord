@@ -40,7 +40,7 @@ class FormServiceTest: XCTestCase {
         XCTAssertEqual(userTest.text, string)
     }
 
-    func testAddTag_textFieldNil_dontAppendMyTags() {
+    func testAddTag_textFieldNil_dontAppendMyTags() throws {
         // given
         let formService = FormService()
 
