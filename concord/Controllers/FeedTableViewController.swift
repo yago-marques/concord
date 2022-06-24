@@ -38,7 +38,7 @@ class FeedTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return 326
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -46,8 +46,9 @@ class FeedTableViewController: UITableViewController {
             let object = service.cardList[indexPath.row]
             cell.nameLabel.text = object.name
             cell.descriptionTextView.text = object.description
-            cell.rateLabel.text = String(object.rate)
+            cell.rateNameLabel.text = object.getStars()
             cell.tagsTextView.text = service.getTags(at: indexPath.row)
+            
             return cell
         }
         
@@ -76,7 +77,6 @@ class FeedTableViewController: UITableViewController {
         let CreateServerViewController = CreateServerViewController(delegate: self)
         navigationController?.pushViewController(CreateServerViewController, animated: true)
     }
-    
     
 }
 

@@ -15,7 +15,6 @@ class CreateTagHeaderView: UIView {
 
     let label = UILabel()
     let button = UIButton()
-    let image = UIImage(systemName: "plus")
 
     var delegate: CreateTagHeaderViewDelegate
     
@@ -35,11 +34,9 @@ class CreateTagHeaderView: UIView {
     func start() {
         label.text = "Tags"
         button.addTarget(self, action: #selector(showModal), for: .touchUpInside)
-        button.setTitle("Tag", for: .normal)
+        button.setTitle("Add tag", for: .normal)
         button.setTitleColor(ColorCompatibility.myTintColor, for: .normal)
-        
-        button.setImage(image, for: .normal)
-        
+                
         self.addSubview(label)
         self.addSubview(button)
         

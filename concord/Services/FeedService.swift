@@ -12,7 +12,8 @@ class FeedService {
     var tagsText: String = ""
     
     var cardList = [
-        Card(name: "Apple academy", description: "Um servidor para estudantes do apple academy", serverUrl: "teste", rate: 4, tags: [Tag(name: "Educação"), Tag(name: "Tecnologia")]),
+        Card(name: "Apple academy", description: "Um servidor para estudantes do apple academy", serverUrl: "https://www.hackingwithswift.com", rate: 5, tags: [Tag(name: "Educação"), Tag(name: "Tecnologia")]),
+        Card(name: "Muuh do free fire", description: "A melhor servidor para vc que está procurando uma gameplay legalzinha de freefas", serverUrl: "teste", rate: 4, tags: [Tag(name: "Battle-royale"), Tag(name: "muuuuh")]),
     ]
     
     func getTags(at: Int) -> String {

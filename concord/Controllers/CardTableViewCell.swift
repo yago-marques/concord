@@ -13,22 +13,19 @@ class CardTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var rateNameLabel: UILabel!
-    @IBOutlet weak var rateLabel: UILabel!
     @IBOutlet weak var tagsTextView: UITextView!
     @IBOutlet weak var enterButton: UIButton!
     @IBOutlet weak var evaluateButton: UIButton!
     
     // MARK: - @IBActions
     @IBAction func shareServerButton(_ sender: Any) {
-        print("teste")
+
     }
     
     // MARK: - Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        rateLabel.textColor = Colors.primaryColor
-        rateNameLabel.textColor = Colors.primaryColor
         enterButton.tintColor = ColorCompatibility.joinButtonColor
         evaluateButton.tintColor = Colors.secondaryLightColor
     }

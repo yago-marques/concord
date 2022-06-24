@@ -5,7 +5,7 @@
 //  Created by Yago Marques on 02/06/22.
 //
 
-import Foundation
+import UIKit
 
 public class Card {
     private(set) var id = UUID()
@@ -27,6 +27,21 @@ public class Card {
         self.serverUrl = serverUrl
         self.rate = rate
         self.tags = tags
+    }
+    
+    func getStars() -> String {
+        var stars = ""
+        for _ in 1...self.rate {
+            stars += "⭐️"
+        }
+        
+        return stars
+    }
+    
+    func shareServer() {
+        if let myUrl = URL(string: serverUrl) {
+            UIApplication.shared.open(myUrl)
+        }
     }
 }
 

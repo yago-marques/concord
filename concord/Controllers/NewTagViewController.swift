@@ -20,7 +20,8 @@ class NewTagViewController: UIViewController {
     
     // MARK: - @IBOutlets
     @IBOutlet weak var tagNameTextField: UITextField?
-
+    @IBOutlet weak var addButton: UIButton!
+    
     // MARK: - Constructors
     init(delegate: NewTagViewControllerDelegate) {
         self.delegate = delegate
@@ -36,6 +37,9 @@ class NewTagViewController: UIViewController {
         super.viewDidLoad()
 
         navigationItem.leftBarButtonItem = cancelButton
+        navigationController?.navigationBar.tintColor = ColorCompatibility.myTintColor
+        
+        addButton.tintColor = Colors.primaryColor
     }
 
     // MARK: - Internal methods

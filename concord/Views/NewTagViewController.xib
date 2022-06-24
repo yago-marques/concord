@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewTagViewController" customModule="concord" customModuleProvider="target">
             <connections>
+                <outlet property="addButton" destination="mA4-3M-WEm" id="yHQ-8d-zEw"/>
                 <outlet property="tagNameTextField" destination="wnO-pi-Iph" id="6lZ-Xh-HBP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,22 +20,13 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tag: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAb-Dl-ePv">
-                    <rect key="frame" x="62" y="94" width="37" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wnO-pi-Iph">
-                    <rect key="frame" x="110" y="88" width="243" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nova tag" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wnO-pi-Iph">
+                    <rect key="frame" x="41.5" y="88" width="331" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mA4-3M-WEm">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mA4-3M-WEm">
                     <rect key="frame" x="151" y="160" width="113" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Adicionar"/>
                     <connections>
@@ -44,6 +36,13 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="wnO-pi-Iph" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="44" id="08L-Un-843"/>
+                <constraint firstItem="wnO-pi-Iph" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="WMX-zW-Qel"/>
+                <constraint firstItem="wnO-pi-Iph" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="lAX-Ob-9WT"/>
+                <constraint firstItem="mA4-3M-WEm" firstAttribute="top" secondItem="wnO-pi-Iph" secondAttribute="bottom" constant="38" id="vMG-uu-6wS"/>
+                <constraint firstItem="mA4-3M-WEm" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="yHP-vW-130"/>
+            </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
         </view>
     </objects>
