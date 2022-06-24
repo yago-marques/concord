@@ -7,7 +7,6 @@
 
 import XCTest
 @testable import concord
-import StoreKitTest
 
 class TagsTests: XCTestCase {
     // given

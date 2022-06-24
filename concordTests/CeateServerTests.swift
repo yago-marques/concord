@@ -10,7 +10,7 @@ import XCTest
 
 class CeateServerTests: XCTestCase {
 
-    func testInit_validInput_addServer() {
+    func testInit_validInput_addServer() throws {
         // given
         class ViewControllerMock: CreateServerViewControllerDelegate {
             var target = false

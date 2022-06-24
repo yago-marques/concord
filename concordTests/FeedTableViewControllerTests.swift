@@ -10,7 +10,7 @@ import XCTest
 
 class FeedTableViewControllerTests: XCTestCase {
 
-    func testInit_validInput_showServerFormTest() {
+    func testInit_validInput_showServerFormTest() throws {
 
         class FeedTableViewControllerMock: CreateServerViewControllerDelegate {
             var target = false

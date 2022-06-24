@@ -115,7 +115,7 @@ class FeedServiceTests: XCTestCase {
         XCTAssertEqual(service.cardList.count, lastListCount)
     }
 
-    func testGuardLet_invalidUrl_throwError() {
+    func testGuardLet_invalidUrl_throwError() throws {
         // given
         let view = UIViewController()
         let user = UITextField()
